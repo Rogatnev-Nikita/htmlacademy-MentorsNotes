@@ -1,2 +1,1 @@
-# htmlacademy-mentor
-Build -  http://rogatnev-nikita.github.io/htmlacademy-mentor
+http://rogatnev-nikita.github.io/htmlacademy_mentor-logbook
