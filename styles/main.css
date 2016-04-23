@@ -12,10 +12,19 @@
 
 	margin: 15px 0 30px;
 }
+.label {
+	display: block;
+
+	height: 20px;
+	padding-top: 3px;
+}
 .progress {
 	margin: 0;
 }
-
 .table {
 	margin-bottom: 0;
+}
+
+.bootstrap-table .table {
+	border: 0;
 }
