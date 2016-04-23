@@ -1,0 +1,21 @@
+/* ------------------------------------------ */
+/*             GENERAL STYLES
+/* ------------------------------------------ */
+.logo {
+	margin-top: 40px;
+}
+.centered-pills {
+	text-align: center;
+}
+.centered-pills ul.nav-pills {
+	display: inline-block;
+
+	margin: 15px 0 30px;
+}
+.progress {
+	margin: 0;
+}
+
+.table {
+	margin-bottom: 0;
+}
