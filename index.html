@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8, user-scalable=no" />
     <meta name="author" content="Rogatnev Nikita" />
     <title>HTML ACADEMY - Блокнот наставника</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css" />
     <link rel="stylesheet" href="./styles/main.css" />
@@ -13,21 +14,29 @@
 
 <body>
 
+    <!-- HEADER -->
+    <header class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <picture>
+                    <source media="(min-width: 700px)" srcset="./img/academy-logo_180.png">
+                    <img src="./img/academy-logo_80.png" alt="html academy" class="logo center-block">
+                </picture>
+                <h1 class="page-header text-uppercase text-center">HTML Academy<br><small class="text-lowercase">блокнот наставника</small></h1>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
     <!-- MAIN -->
     <main class="container">
-        <section class="row">
-
-            <!-- HEADER -->
-            <header class="col-xs-12">
-                <img src="./img/academy-logo.png" class="logo img-responsive center-block" alt="html academy" width="120">
-                <h1 class="page-header text-uppercase text-center">HTML Academy<br><small class="text-lowercase">блокнот наставника</small></h1>
-            </header>
-            <!-- HEADER END -->
+        <div class="row">
 
             <!-- TABS NAVIGATION -->
             <nav class="col-xs-12 centered-pills">
                 <ul class="nav nav-pills">
                     <li class="active"><a data-toggle="tab" href="#students_13--tab">Базовый HTML и CSS #13</a></li>
+                    <li><a data-toggle="tab" href="#students_adaptive_7--tab">Продвинутый HTML и CSS #7</a></li>
                     <li><a data-toggle="tab" href="#students_14--tab">Базовый HTML и CSS #14</a></li>
                 </ul>
             </nav>
@@ -37,7 +46,7 @@
             <div class="col-xs-12 tab-content">
 
                 <!-- INTENSIVE ITEM -->
-                <div id="students_13--tab" class="tab-pane fade in active">
+                <section id="students_13--tab" class="tab-pane fade in active">
                     <table data-toggle="table" data-url="./students/students_13.json">
                         <thead>
                             <tr>
@@ -51,11 +60,29 @@
                         </thead>
                     </table>
                     <button type="button" class="save btn btn-default center-block">Сохранить</button>
-                </div>
+                </section>
                 <!-- INTENSIVE ITEM END -->
 
                 <!-- INTENSIVE ITEM -->
-                <div id="students_14--tab" class="tab-pane fade in">
+                <section id="students_adaptive_7--tab" class="tab-pane fade in">
+                    <table data-toggle="table" data-url="./students/students_adaptive_7.json">
+                        <thead>
+                            <tr>
+                                <th data-field="student" data-sortable="true">Студент</th>
+                                <th data-field="section" data-sortable="true">Раздел</th>
+                                <th data-field="consultations" data-sortable="true">Консультации</th>
+                                <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
+                                <th data-field="comment" data-sortable="false">Комментарий</th>
+                                <th data-field="exam" data-sortable="true">Защита</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
+                </section>
+                <!-- INTENSIVE ITEM END -->
+
+                <!-- INTENSIVE ITEM -->
+                <section id="students_14--tab" class="tab-pane fade in">
                     <table data-toggle="table" data-url="./students/students_14.json">
                         <thead>
                             <tr>
@@ -68,15 +95,28 @@
                             </tr>
                         </thead>
                     </table>
-                </div>
+                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
+                </section>
                 <!-- INTENSIVE ITEM END -->
 
             </div>
             <!-- TABS CONTENTS END -->
 
-        </section>
+        </div>
     </main>
     <!-- MAIN END -->
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <div class="row">
+            <ul class="col-xs-12 text-center">
+                <li><a href="https://htmlacademy.ru" target="_blank">HTML Academy</a></li>
+                <li><a href="https://github.com/Rogatnev-Nikita/htmlacademy_mentor-logbook" target="_blank">Github</a></li>
+                <li><a href="http://www.rogatnev.ru" target="_blank">Rogatnev</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
 
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
