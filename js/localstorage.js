@@ -10,6 +10,7 @@ function getFromLocationStorage() {
             var values = JSON.parse(localStorage.getItem(key));
             for (var index in values) {
                 jQuery("input[name=" + index + "]").val(values[index]);
+                console.log(values);
             }
         } catch (e) {}
     }
@@ -23,7 +24,7 @@ function saveToLocalStorage() {
         var key = "inputs-" + url;
         var values = {};
 
-        jQuery("form input").each(function() {
+        jQuery("input").each(function() {
             values[jQuery(this).attr("name")] = jQuery(this).val();
         });
 

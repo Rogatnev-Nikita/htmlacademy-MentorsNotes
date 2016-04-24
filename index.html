@@ -28,6 +28,8 @@
     </header>
     <!-- HEADER END -->
 
+
+
     <!-- MAIN -->
     <main class="container">
         <div class="row">
@@ -42,18 +44,21 @@
             </nav>
             <!-- TABS NAVIGATION END -->
 
+        </div>
+        <div class="row">
+
             <!-- TABS CONTENTS -->
             <section class="col-xs-12 tab-content">
 
                 <!-- INTENSIVE ITEM -->
                 <form id="students_13--tab" class="tab-pane fade in active text-center">
-                    <table class="text-left" data-toggle="table" data-url="./students/base/students_13.json">
+                    <table data-toggle="table" data-url="./students/base/students_13.json">
                         <thead>
                             <tr>
-                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
-                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="false" class="hidden">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="false">Студент</th>
                                 <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="false" class="hidden-xs">Консультации</th>
                                 <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
                                 <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
                                 <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
@@ -69,13 +74,13 @@
 
                 <!-- INTENSIVE ITEM -->
                 <form id="students_adaptive_7--tab" class="tab-pane fade in text-center">
-                    <table class="text-left" data-toggle="table" data-url="./students/adaptive/students_adaptive_7.json">
+                    <table data-toggle="table" data-url="./students/adaptive/students_adaptive_7.json">
                         <thead>
                             <tr>
-                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
-                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="false" class="hidden">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="false">Студент</th>
                                 <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="false" class="hidden-xs">Консультации</th>
                                 <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
                                 <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
                                 <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
@@ -83,7 +88,7 @@
                         </thead>
                     </table>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default">Сохранить</button>
+                        <button onclick="saveToLocalStorage(); return false;" class="btn btn-default">Сохранить</button>
                         <button type="button" class="btn btn-default">Скачать</button>
                     </div>
                 </form>
@@ -91,13 +96,13 @@
 
                 <!-- INTENSIVE ITEM -->
                 <form id="students_14--tab" class="tab-pane fade in text-center">
-                    <table class="text-left" data-toggle="table" data-url="./students/base/students_14.json">
+                    <table data-toggle="table" data-url="./students/base/students_14.json">
                         <thead>
                             <tr>
-                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
-                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="false" class="hidden">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="false">Студент</th>
                                 <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="false" class="hidden-xs">Консультации</th>
                                 <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
                                 <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
                                 <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
@@ -105,7 +110,7 @@
                         </thead>
                     </table>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default">Сохранить</button>
+                        <button onclick="saveToLocalStorage(); return false;" class="btn btn-default">Сохранить</button>
                         <button type="button" class="btn btn-default">Скачать</button>
                     </div>
                 </form>
@@ -136,18 +141,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
 
     <script>
-        var intensive = '13';
+        var intensive = '14';
 
         function idFormatter(value) {
             return '<a href="https://up.htmlacademy.ru/htmlcss/' + intensive + '/student/' + value + '" target="_blank">' + value + '</a>';
         }
 
         function nameFormatter(value) {
-            return value;
+            return '<span class="label label-transparent">' + value; + '</span>';
         }
 
         function sectionFormatter(value) {
-            return value;
+            return '<span class="label label-transparent">' + value; + '</span>';
         }
 
         function consultationsFormatter(value) {
@@ -157,11 +162,11 @@
         }
 
         function next_consultationFormatter(value) {
-            return '<input type="text" id="next_consultation_' + value + '" name="next_consultation_' + value + '" class="form-control next_consultation">';
+            return '<input type="date" id="next_consultation_' + value + '" name="next_consultation_' + value + '" class="form-control next_consultation" placeholder="дд.мм.гггг">';
         }
 
         function commentFormatter(value) {
-            return '<input type="text" id="comment_' + value + '" name="comment_' + value + '" class="form-control next_consultation">';
+            return '<input type="text" id="comment_' + value + '" name="comment_' + value + '" class="form-control next_consultation" placeholder="комментарий">';
         }
 
         function examFormatter(value) {
@@ -175,7 +180,7 @@
         }
     </script>
 
-    <script src="./js/localstorage.js" defer></script>
+    <script src="./js/localstorage.js"></script>
     <!-- SCRIPTS END -->
 
 </body>
