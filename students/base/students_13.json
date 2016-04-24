@@ -1,23 +1,27 @@
 [
     {
-        "student": {
-            "name": "Александр",
-            "id": "<a href=\"https://up.htmlacademy.ru/htmlcss/13/student/5595\" target=\"_blank\">(id5595)</a>"
-        },
+        "id": "5595",
+        "name": "Александр 1",
         "section": "Верстка",
-        "consultations": "<div class=\"progress\"><div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"240\" style=\"width:40%\">20 / 240</div>",
-        "next_consultation": "<div id=\"edit\" contenteditable=\"true\">-</div>",
-        "comment": "<div id=\"edit\" contenteditable=\"true\">-</div>",
-        "exam": "<span class=\"label label-default\">нет данных</span>"
+        "consultations": "60",
+        "next_consultation": "",
+        "comment": "",
+        "exam": "нет данных"
     }, {
-        "student": {
-            "name": "Александр",
-            "id": "<a href=\"https://up.htmlacademy.ru/htmlcss/13/student/5595\" target=\"_blank\">(id5595)</a>"
-        },
+        "id": "5595",
+        "name": "Александр 2",
         "section": "Сетки",
-        "consultations": "<div class=\"progress\"><div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"240\" style=\"width:40%\">30 / 240</div>",
-        "next_consultation": "<div id=\"edit\" contenteditable=\"true\">-</div>",
-        "comment": "<div id=\"edit\" contenteditable=\"true\">-</div>",
-        "exam": "<span class=\"label label-default\">нет данных</span>"
+        "consultations": "200",
+        "next_consultation": "",
+        "comment": "",
+        "exam": "сдал"
+    }, {
+        "id": "5595",
+        "name": "Александр 3",
+        "section": "Сетки",
+        "consultations": "240",
+        "next_consultation": "",
+        "comment": "",
+        "exam": "не сдал"
     }
 ]

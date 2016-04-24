@@ -54,11 +54,11 @@
 .bootstrap-table .table {
 	border: 0;
 }
-div[contenteditable="true"] {
+.contenteditable[contenteditable="true"] {
 	border-bottom: 1px solid transparent;
 }
-[contenteditable="true"]:active,
-[contenteditable="true"]:focus {
+.contenteditable[contenteditable="true"]:active,
+.contenteditable[contenteditable="true"]:focus {
 	border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 	outline: none;
 }

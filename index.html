@@ -50,12 +50,13 @@
                     <table data-toggle="table" data-url="./students/base/students_13.json">
                         <thead>
                             <tr>
-                                <th data-field="student" data-sortable="true">Студент</th>
-                                <th data-field="section" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-sortable="true">Консультации</th>
-                                <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
-                                <th data-field="comment" data-sortable="false">Комментарий</th>
-                                <th data-field="exam" data-sortable="true">Защита</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
+                                <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
+                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
+                                <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
                             </tr>
                         </thead>
                     </table>
@@ -68,12 +69,13 @@
                     <table data-toggle="table" data-url="./students/adaptive/students_adaptive_7.json">
                         <thead>
                             <tr>
-                                <th data-field="student" data-sortable="true">Студент</th>
-                                <th data-field="section" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-sortable="true">Консультации</th>
-                                <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
-                                <th data-field="comment" data-sortable="false">Комментарий</th>
-                                <th data-field="exam" data-sortable="true">Защита</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="true">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true">Консультации</th>
+                                <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
+                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false">Комментарий</th>
+                                <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
                             </tr>
                         </thead>
                     </table>
@@ -86,12 +88,13 @@
                     <table data-toggle="table" data-url="./students/base/students_14.json">
                         <thead>
                             <tr>
-                                <th data-field="student" data-sortable="true">Студент</th>
-                                <th data-field="section" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-sortable="true">Консультации</th>
-                                <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
-                                <th data-field="comment" data-sortable="false">Комментарий</th>
-                                <th data-field="exam" data-sortable="true">Защита</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="true">ID</th>
+                                <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
+                                <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true">Консультации</th>
+                                <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
+                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false">Комментарий</th>
+                                <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
                             </tr>
                         </thead>
                     </table>
@@ -122,6 +125,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+
+    <script>
+        var intensive = '13';
+
+        function idFormatter(value) {
+            return '<a href="https://up.htmlacademy.ru/htmlcss/' + intensive + '/student/' + value + '" target="_blank">' + value + '</a>';
+        }
+
+        function nameFormatter(value) {
+            return value;
+        }
+
+        function sectionFormatter(value) {
+            return value;
+        }
+
+        function consultationsFormatter(value) {
+            return '<div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="' + value + '" aria-valuemin="0" aria-valuemax="240" style="width:' + value * 100 / 240 + '%">' +
+                value + ' / 240</div>';
+        }
+
+        function next_consultationFormatter(value) {
+            return '<div class="contenteditable" contenteditable="true">' + value + '</div>';
+        }
+
+        function commentFormatter(value) {
+            return '<div class="contenteditable" contenteditable="true">' + value + '</div>';
+        }
+
+        function examFormatter(value) {
+            if (value == 'нет данных') {
+                return '<span class="label label-default">' + value; + '</span>';
+            } else if (value == 'сдал') {
+                return '<span class="label label-success">' + value; + '</span>';
+            } else if (value == 'не сдал') {
+                return '<span class="label label-danger">' + value; + '</span>';
+            }
+        }
+    </script>
     <!-- SCRIPTS END -->
 
 </body>
