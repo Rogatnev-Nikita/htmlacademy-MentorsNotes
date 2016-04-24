@@ -1,27 +1,19 @@
 [
     {
         "id": "5595",
+        "next_consultation": "5595",
+        "comment": "5595",
         "name": "Александр 1",
         "section": "Верстка",
         "consultations": "60",
-        "next_consultation": "",
-        "comment": "",
         "exam": "нет данных"
     }, {
-        "id": "5595",
-        "name": "Александр 2",
-        "section": "Сетки",
-        "consultations": "200",
-        "next_consultation": "",
-        "comment": "",
-        "exam": "сдал"
-    }, {
-        "id": "5595",
-        "name": "Александр 3",
-        "section": "Сетки",
-        "consultations": "240",
-        "next_consultation": "",
-        "comment": "",
-        "exam": "не сдал"
+        "id": "1111",
+        "next_consultation": "1111",
+        "comment": "1111",
+        "name": "Александр 1",
+        "section": "Верстка",
+        "consultations": "60",
+        "exam": "нет данных"
     }
 ]

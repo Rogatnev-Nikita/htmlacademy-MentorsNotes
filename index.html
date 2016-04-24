@@ -43,11 +43,11 @@
             <!-- TABS NAVIGATION END -->
 
             <!-- TABS CONTENTS -->
-            <div class="col-xs-12 tab-content">
+            <section class="col-xs-12 tab-content">
 
                 <!-- INTENSIVE ITEM -->
-                <section id="students_13--tab" class="tab-pane fade in active">
-                    <table data-toggle="table" data-url="./students/base/students_13.json">
+                <form id="students_13--tab" class="tab-pane fade in active text-center">
+                    <table class="text-left" data-toggle="table" data-url="./students/base/students_13.json">
                         <thead>
                             <tr>
                                 <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
@@ -60,49 +60,58 @@
                             </tr>
                         </thead>
                     </table>
-                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
-                </section>
+                    <div class="btn-group">
+                        <button onclick="saveToLocalStorage(); return false;" class="btn btn-default">Сохранить</button>
+                        <button type="button" class="btn btn-default">Скачать</button>
+                    </div>
+                </form>
                 <!-- INTENSIVE ITEM END -->
 
                 <!-- INTENSIVE ITEM -->
-                <section id="students_adaptive_7--tab" class="tab-pane fade in">
-                    <table data-toggle="table" data-url="./students/adaptive/students_adaptive_7.json">
+                <form id="students_adaptive_7--tab" class="tab-pane fade in text-center">
+                    <table class="text-left" data-toggle="table" data-url="./students/adaptive/students_adaptive_7.json">
                         <thead>
                             <tr>
-                                <th data-field="id" data-formatter="idFormatter" data-sortable="true">ID</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
                                 <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
                                 <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true">Консультации</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
                                 <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
-                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false">Комментарий</th>
+                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
                                 <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
                             </tr>
                         </thead>
                     </table>
-                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
-                </section>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Сохранить</button>
+                        <button type="button" class="btn btn-default">Скачать</button>
+                    </div>
+                </form>
                 <!-- INTENSIVE ITEM END -->
 
                 <!-- INTENSIVE ITEM -->
-                <section id="students_14--tab" class="tab-pane fade in">
-                    <table data-toggle="table" data-url="./students/base/students_14.json">
+                <form id="students_14--tab" class="tab-pane fade in text-center">
+                    <table class="text-left" data-toggle="table" data-url="./students/base/students_14.json">
                         <thead>
                             <tr>
-                                <th data-field="id" data-formatter="idFormatter" data-sortable="true">ID</th>
+                                <th data-field="id" data-formatter="idFormatter" data-sortable="true" class="visible-lg">ID</th>
                                 <th data-field="name" data-formatter="nameFormatter" data-sortable="true">Студент</th>
                                 <th data-field="section" data-formatter="sectionFormatter" data-sortable="true">Раздел</th>
-                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true">Консультации</th>
+                                <th data-field="consultations" data-formatter="consultationsFormatter" data-sortable="true" class="hidden-xs">Консультации</th>
                                 <th data-field="next_consultation" data-formatter="next_consultationFormatter" data-sortable="false">Следующая конс.</th>
-                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false">Комментарий</th>
+                                <th data-field="comment" data-formatter="commentFormatter" data-sortable="false" class="hidden-xs">Комментарий</th>
                                 <th data-field="exam" data-formatter="examFormatter" data-sortable="true">Защита</th>
                             </tr>
                         </thead>
                     </table>
-                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
-                </section>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Сохранить</button>
+                        <button type="button" class="btn btn-default">Скачать</button>
+                    </div>
+                </form>
                 <!-- INTENSIVE ITEM END -->
 
-            </div>
+            </section>
             <!-- TABS CONTENTS END -->
 
         </div>
@@ -142,16 +151,17 @@
         }
 
         function consultationsFormatter(value) {
-            return '<div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="' + value + '" aria-valuemin="0" aria-valuemax="240" style="width:' + value * 100 / 240 + '%">' +
-                value + ' / 240</div>';
+            return '<div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="' + value + '" aria-valuemin="0" aria-valuemax="240" style="width:' + value * 100 /
+                240 + '%">' +
+                value + '/240</div>';
         }
 
         function next_consultationFormatter(value) {
-            return '<div class="contenteditable" contenteditable="true">' + value + '</div>';
+            return '<input type="text" id="next_consultation_' + value + '" name="next_consultation_' + value + '" class="form-control next_consultation">';
         }
 
         function commentFormatter(value) {
-            return '<div class="contenteditable" contenteditable="true">' + value + '</div>';
+            return '<input type="text" id="comment_' + value + '" name="comment_' + value + '" class="form-control next_consultation">';
         }
 
         function examFormatter(value) {
@@ -164,6 +174,8 @@
             }
         }
     </script>
+
+    <script src="./js/localstorage.js" defer></script>
     <!-- SCRIPTS END -->
 
 </body>
