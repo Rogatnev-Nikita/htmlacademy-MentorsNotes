@@ -2,15 +2,33 @@
 /*             GENERAL STYLES
 /* ------------------------------------------ */
 .logo {
-	margin-top: 40px;
+	margin-top: 30px;
+}
+.page-header {
+	margin: 20px 0;
 }
 .centered-pills {
 	text-align: center;
 }
-.centered-pills ul.nav-pills {
+.nav-pills {
 	display: inline-block;
 
-	margin: 15px 0 30px;
+	margin: 10px 0 25px;
+}
+.nav-pills > li > a {
+	color: #777777;
+	border: 2px dashed rgba(0, 0, 0, 0);
+}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+	color: #777777;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+	color: #777777;
+	border: 2px dashed rgba(0, 0, 0, 0.3);
+	background: transparent;
 }
 .label {
 	display: block;
@@ -24,7 +42,18 @@
 .table {
 	margin-bottom: 0;
 }
-
 .bootstrap-table .table {
 	border: 0;
+}
+div[contenteditable="true"] {
+	border-bottom: 1px solid transparent;
+}
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+	outline: none;
+}
+.save {
+	margin-top: 20px;
 }

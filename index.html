@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8, user-scalable=no" />
     <meta name="author" content="Rogatnev Nikita" />
     <title>HTML ACADEMY - Блокнот наставника</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./styles/bootstrap-table.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css" />
     <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
@@ -20,7 +20,7 @@
             <!-- HEADER -->
             <header class="col-xs-12">
                 <img src="./img/academy-logo.png" class="logo img-responsive center-block" alt="html academy" width="120">
-                <h1 class="page-header text-uppercase text-center">HTML Academy <small class="text-lowercase">блокнот наставника</small></h1>
+                <h1 class="page-header text-uppercase text-center">HTML Academy<br><small class="text-lowercase">блокнот наставника</small></h1>
             </header>
             <!-- HEADER END -->
 
@@ -38,10 +38,28 @@
 
                 <!-- INTENSIVE ITEM -->
                 <div id="students_13--tab" class="tab-pane fade in active">
-                    <table id="students_13" data-search="false" data-show-columns="false" data-pagination="false" data-toggle="table" data-url="students/students_13.json">
+                    <table data-toggle="table" data-url="./students/students_13.json">
                         <thead>
                             <tr>
-                                <th data-field="name" data-sortable="true">Студент</th>
+                                <th data-field="student" data-sortable="true">Студент</th>
+                                <th data-field="section" data-sortable="true">Раздел</th>
+                                <th data-field="consultations" data-sortable="true">Консультации</th>
+                                <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
+                                <th data-field="comment" data-sortable="false">Комментарий</th>
+                                <th data-field="exam" data-sortable="true">Защита</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button type="button" class="save btn btn-default center-block">Сохранить</button>
+                </div>
+                <!-- INTENSIVE ITEM END -->
+
+                <!-- INTENSIVE ITEM -->
+                <div id="students_14--tab" class="tab-pane fade in">
+                    <table data-toggle="table" data-url="./students/students_14.json">
+                        <thead>
+                            <tr>
+                                <th data-field="student" data-sortable="true">Студент</th>
                                 <th data-field="section" data-sortable="true">Раздел</th>
                                 <th data-field="consultations" data-sortable="true">Консультации</th>
                                 <th data-field="next_consultation" data-sortable="false">Следующая конс.</th>
@@ -53,12 +71,6 @@
                 </div>
                 <!-- INTENSIVE ITEM END -->
 
-                <!-- INTENSIVE ITEM -->
-                <div id="students_14--tab" class="tab-pane fade in">
-
-                </div>
-                <!-- INTENSIVE ITEM END -->
-
             </div>
             <!-- TABS CONTENTS END -->
 
@@ -66,61 +78,10 @@
     </main>
     <!-- MAIN END -->
 
-
-    <table data-toggle="table" data-url="/gh/get/response.json/wenzhixin/bootstrap-table/tree/master/docs/data/data1/">
-        <thead>
-            <tr>
-                <th data-field="name">Name</th>
-                <th data-field="stargazers_count">Stars</th>
-                <th data-field="forks_count">Forks</th>
-                <th data-field="description">Description</th>
-            </tr>
-        </thead>
-    </table>
-
-
-
-    <!-- CONSULTATIONS MODAL -->
-    <article class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="student-modal-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="text-uppercase text-center">Консультации</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered text-center">
-                            <thead>
-                                <tr>
-                                    <th class="col-xs-6 text-center">Дата</th>
-                                    <th class="col-xs-6 text-center">Время</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>21.04.2016</td>
-                                    <td>20 мин</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </article>
-    <!-- CONSULTATIONS MODAL END -->
-
-
-
-
     <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.js"></script>
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
     <!-- SCRIPTS END -->
 
 </body>
