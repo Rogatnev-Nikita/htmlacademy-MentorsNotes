@@ -1,1 +1,2 @@
-http://rogatnev-nikita.github.io/htmlacademy_mentor-logbook
+# Блокнот наставника htmlacademy
+http://rogatnev-nikita.github.io/htmlacademy-MentorsNotes/
