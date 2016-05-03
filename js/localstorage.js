@@ -1,4 +1,4 @@
-jQuery(document).ready(getFromLocationStorage);
+$('#students_13').on('load-success.bs.table, getFromLocationStorage);
 
 function getFromLocationStorage() {
     if (window.localStorage != null) {
